@@ -1,0 +1,44 @@
+{
+	"name": "smart-bot",
+	"version": "1.0.0",
+	"description": "A smart bot with lots of features",
+	"author": "Edric Chan <edric.chan.1997@gmail.com> (https://chan4077.github.io/smart-bot)",
+	"license": "ISC",
+	"repository": "https://github.com/Chan4077/smart-bot.git",
+	"homepage": "https://github.com/Chan4077/smart-bot",
+	"bugs": "https://github.com/Chan4077/smart-bot/issues",
+	"keywords": [
+		"probot",
+		"github",
+		"probot-app"
+	],
+	"scripts": {
+		"build": "tsc -p tsconfig.json",
+		"build:watch": "tsc -p tsconfig.json --watch",
+		"dev": "nodemon --exec \"npm start\"",
+		"dev:watch": "concurrently \"npm run build:watch\" \"npm start\"",
+		"start": "probot run ./lib/index.js",
+		"lint": "standard --fix",
+		"test": "jest && standard",
+		"test:watch": "jest --watch --notify --notifyMode=change --coverage"
+	},
+	"dependencies": {
+		"probot": "^7.0.0"
+	},
+	"devDependencies": {
+		"concurrently": "^3.6.0",
+		"jest": "^22.4.3",
+		"nodemon": "^1.17.2",
+		"smee-client": "^1.0.2",
+		"standard": "^10.0.3",
+		"typescript": "^2.9.2"
+	},
+	"engines": {
+		"node": ">= 8.3.0"
+	},
+	"standard": {
+		"env": [
+			"jest"
+		]
+	}
+}
