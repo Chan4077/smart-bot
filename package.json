@@ -16,8 +16,9 @@
 		"build": "tsc -p tsconfig.json",
 		"build:watch": "tsc -p tsconfig.json --watch",
 		"dev": "nodemon --exec \"npm start\"",
-		"dev:watch": "concurrently \"npm run build:watch\" \"npm start\"",
+		"dev:watch": "concurrently -k --kill-others-on-fail  \"npm run build:watch\" \"npm run run:watch\"",
 		"start": "probot run ./lib/index.js",
+		"run:watch": "run-when-changed --watch \"src/**/*\" --exec \"npm start\"",
 		"lint": "standard --fix",
 		"test": "jest && standard",
 		"test:watch": "jest --watch --notify --notifyMode=change --coverage"
@@ -29,6 +30,7 @@
 		"concurrently": "^3.6.0",
 		"jest": "^22.4.3",
 		"nodemon": "^1.17.2",
+		"run-when-changed": "^2.1.0",
 		"smee-client": "^1.0.2",
 		"standard": "^10.0.3",
 		"typescript": "^2.9.2"
