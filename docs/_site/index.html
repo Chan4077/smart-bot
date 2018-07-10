@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="height-full">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		
+		<title>smart-bot</title>
+		
+		<link href="https://unpkg.com/primer/build/build.css" rel="stylesheet">
+		<link href="https://styleguide.github.com/assets/github/styleguide.css" rel="stylesheet">
+		<link href="https://styleguide.github.com/assets/main.css" rel="stylesheet">
+		<link href="/octicons/build.css" rel="stylesheet">
+		<link href="/robot.png" rel="icon">
+	</head>
+
+	<body class="height-full bg-gray-light">
+		<div class="bg-purple" style="position:-webkit-sticky;position:sticky;top:0;left:0;right:0;z-index:101;">
+			<div class="main-nav d-flex flex-justify-between px-3 pl-md-4 pr-md-4 py-3 box-shadow bg-purple Details js-details-container"
+			 data-pjax="#js-pjax-container">
+				<div class="d-flex flex-self-center flex-lg-auto mr-lg-2">
+					<a href="/" class="border-gray-dark no-underline text-white" aria-label="Github Style guide">
+						<img src="/robot.svg" width="28" alt="smart-bot logo">
+					</a>
+				</div>
+				<div class="d-none d-lg-flex flex-justify-end">
+					<nav class="flex-self-center flex-shrink-0 text-white" aria-label="Primary">
+						<a href="/" class="text-white px-md-1 px-lg-2">
+							Docs</a>
+						<a href="/getting-started" class="text-white px-md-1 px-lg-2">Getting started</a>
+						<a href="/commands" class="text-white px-md-1 px-lg-2">Commands</a>
+						<a href="https://github.com/Chan4077/smart-bot/blob/master/CHANGELOG.md" class="text-white px-md-1 px-lg-2">Whatʼs new</a>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="d-flex flex-wrap flex-lg-nowrap">
+			<main class="flex-row flex-lg-column main-content mt-4 mt-lg-6 pb-6 mx-auto px-3">
+				<div class="d-flex flex-column flex-justify-center flex-items-center text-center height-full flex-self-center">
+	<img src="robot.svg" alt="smart-bot icon" width="100" class="mb-6">
+	<div class="box-shadow rounded-2 border p-6 bg-white">
+		<h1>
+			Welcome to smart-bot
+			<span class="Label Label--outline v-align-middle ml-2 text-gray-light">v1.0.0</span>
+		</h1>
+		<p class="text-italic">A smart bot with lots of features</p>
+		<p>This bot was built using
+			<a href="https://github.com/probot/probot">Probot</a>, a framework for building GitHub Apps.</p>
+		<p class="text-italic">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+	</div>
+
+	<div class="mt-4">
+		<h4 class="alt-h4 text-gray-light">Need help?</h4>
+		<div class="d-flex flex-justify-center mt-2">
+			<a href="https://probot.github.io/docs/" class="btn btn-outline mr-2">Documentation</a>
+			<a href="https://probot-slackin.herokuapp.com/" class="btn btn-outline">Chat on Slack</a>
+		</div>
+	</div>
+</div>
+			</main>
+			<nav id="navigation" class="sidebar flex-column flex-justify-start overflow-auto border-right bg-gray-light pb-4">
+				<ul class="list-style-none">
+					<li class="px-4 my-4">
+						<a href="/commands" class="position-relative f4 d-block text-gray-dark">Commands</a>
+						<ul class="pt-2 list-style-none">
+							<li>
+								<a href="/commands/addLabel" class="position-relative f5 py-1 d-block">
+									<code>addLabel</code>
+									<span class="position-absolute right-0">
+										<span class="text-green tooltipped tooltipped-nw" aria-label="Stable">
+											<svg height="18" class="octicon octicon-primitive-dot v-align-text-top" viewBox="0 0 8 16" version="1.1" width="9" aria-hidden="true">
+												<path fill-rule="evenodd" d="M0 8c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4z"></path>
+											</svg>
+										</span>
+									</span>
+								</a>
+								<a href="/commands/removeLabel" class="position-relative f5 py-1 d-block">
+									<code>removeLabel</code>
+									<span class="position-absolute right-0">
+										<span class="text-green tooltipped tooltipped-nw" aria-label="Stable">
+											<svg height="18" class="octicon octicon-primitive-dot v-align-text-top" viewBox="0 0 8 16" version="1.1" width="9" aria-hidden="true">
+												<path fill-rule="evenodd" d="M0 8c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4z"></path>
+											</svg>
+										</span>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="mt-4 border-bottom"></li>
+				</ul>
+			</nav>
+		</div>
+	</body>
+
+</html>

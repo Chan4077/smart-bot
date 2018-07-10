@@ -1,0 +1,72 @@
+---
+layout: default
+---
+<nav aria-label="Breadcrumb">
+	<ol>
+		<li class="breadcrumb-item text-small">
+			<a href="/commands">Commands</a>
+		</li>
+		<li class="breadcrumb-item breadcrumb-item-selected text-small text-gray" aria-current="page">
+			<code>{{ page.command }}</code>
+		</li>
+	</ol>
+</nav>
+<h2 class="f00-light border-0 pb-3 d-block v-align-middle mt-2">{{ page.command }}</h2>
+<div class="border-top border-bottom py-3 mb-4 clearfix">
+	<div class="float-right">
+		<a href="https://github.com/primer/primer/issues/new?title=" class="d-inline-block link-gray-dark no-underline tooltipped tooltipped-nw mt-2 mr-2"
+		 aria-label="Provide feedback">
+			{% octicon comment %}
+		</a>
+		<a href="https://github.com/github/github/blob/master/docs/styleguide/css/styles/product/components/pagehead.md" class="d-inline-block link-gray-dark no-underline tooltipped tooltipped-nw mt-2"
+		 aria-label="View source">
+			{% octicon file-code %}
+		</a>
+	</div>
+	<div class="d-inline-block Box mr-3">
+		{% if page.status == 'stable' %}
+			<a href="#" aria-label="Safe to use" class="d-inline-block tooltipped tooltipped-n link-gray-dark no-underline px-2 py-1">
+				<span class="text-green mr-1" aria-label="Unstable">
+					<svg height="18" class="octicon octicon-primitive-dot v-align-text-top" viewBox="0 0 8 16" version="1.1" width="9" aria-hidden="true">
+						<path fill-rule="evenodd" d="M0 8c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4z"></path>
+					</svg>
+				</span>
+				Stable</a>
+		{% else if page.status == 'unstable' %}
+			<a href="#" aria-label="Unstable; do not use" class="d-inline-block tooltipped tooltipped-n link-gray-dark no-underline px-2 py-1">
+				<span class="text-red mr-1" aria-label="Unstable">
+					<svg height="18" class="octicon octicon-primitive-dot v-align-text-top" viewBox="0 0 8 16" version="1.1" width="9" aria-hidden="true">
+						<path fill-rule="evenodd" d="M0 8c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4z"></path>
+					</svg>
+				</span>
+				Unstable</a>
+		{% else if page.status == 'experimental' %}
+			<a href="#" aria-label="Experimental; may be removed in a future release" class="d-inline-block tooltipped tooltipped-n link-gray-dark no-underline px-2 py-1">
+				<span class="text-yellow mr-1" aria-label="Experimental">
+					<svg height="18" class="octicon octicon-primitive-dot v-align-text-top" viewBox="0 0 8 16" version="1.1" width="9" aria-hidden="true">
+						<path fill-rule="evenodd" d="M0 8c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4z"></path>
+					</svg>
+				</span>
+				Experimental</a>
+		{% endif %}
+	</div>
+</div>
+<div class="command-docs-body markdown-body">
+
+	{% if page.syntax %}
+	<h2>Syntax</h2>
+	<pre><code>{{ page.syntax }}</code></pre>
+	{% if page.syntaxNotes %}
+	<h3>Notes</h3>
+	<ul>
+		{% for note in page.syntaxNotes %}
+		<li>{{ note }}</li>
+		{% endfor %}
+	</ul>
+	{% endif %}
+	{% endif %}
+	{% if page.description %}
+	<h2>Description</h2>
+	<p>{{ page.description }}</p>
+	{% endif %}
+</div>
